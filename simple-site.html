@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Greet By Name</title>
+  </head>
+  <body>
+    <main>
+      <div id="greetingDiv"></div>
+      <input id="nameInput" type="text" value="" placeholder="enter name" />
+      <button onclick="printMessage()">Print Message</button>
+      <div id="welcomeDiv"></div>
+    </main>
+
+    <script>
+      "use strict";
+      let greetingDiv = document.getElementById("greetingDiv");
+      console.log(greetingDiv);
+      greetingDiv.innerText = "Hello";
+
+      let nameInput = document.getElementById("nameInput");
+      var currentMessage = greetingDiv.innerText;
+      console.log(currentMessage);
+      var currentName = nameInput.value;
+      console.log(currentName);
+
+      let welcomeDiv = document.getElementById("welcomeDiv");
+
+      function printMessage() {
+        let name = nameInput.value;
+        welcomeDiv.innerText = "Welcome to the Family " + name;
+        console.log(welcomeDiv);
+      }
+
+    </script>
+  </body>
+</html>
