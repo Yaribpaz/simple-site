@@ -8,24 +8,56 @@
   </head>
   <body>
     <main>
-      <label for="number1Input">Number 1</label>
-      <input id="number1Input" type="number" />
-      <label for="number2Input">Number 2</label>
-      <input id="number2Input" type="number" />
-      <button onclick="add()">Add</button>
-      <button>Subtract</button>
-      <button>Multiply</button>
-      <button>Divide</button>
-      <label for="answerInput">Answer</label>
-      <input readonly id="answerInput" type="text" />
+      <article>
+        <h3>Calculator</h3>
+        
+        <label for="number1Input">Number 1</label>
+        <input id="number1Input" type="number" />
+        <label for="number2Input">Number 2</label>
+        <input id="number2Input" type="number" />
+        <button onclick="add()">Add</button>
+        <button onclick="subtract()">Subtract</button>
+        <button onclick="multiply()">Multiply</button>
+        <button onclick="divide()">Divide</button>
+        <label for="answerInput">Answer</label>
+        <input readonly id="answerInput" type="text" />
+      </article>
     </main>
     <script>
       let number1Input = document.getElementById("number1Input");
       let number2Input = document.getElementById("number2Input");
+      let answerInput = document.getElementById("answerInput");
+
       function add() {
         var number1 = Number(number1Input.value);
         var number2 = Number(number2Input.value);
-        var sum = number1 + number2
+        var sum = number1 + number2;
+        answerInput.value = sum;
+        console.log(sum);
+      }
+
+      function subtract() {
+        var number1 = Number(number1Input.value);
+        var number2 = Number(number2Input.value);
+        var difference = number1 - number2;
+        answerInput.value = difference;
+        console.log(difference);
+      }
+
+      function multiply() {
+        var number1 = Number(number1Input.value);
+        var number2 = Number(number2Input.value);
+        var product = number1 * number2;
+        answerInput.value = product;
+        console.log(product);
+      }
+
+      function divide() {
+        var number1 = Number(number1Input.value);
+        var number2 = Number(number2Input.value);
+        var quotient = number1 / number2;
+        answerInput.value = quotient;
+        console.log(quotient);
       }
     </script>
   </body>
